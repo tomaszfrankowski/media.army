@@ -1,0 +1,21 @@
+@import 'swiper/swiper-bundle.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.editor-styles-wrapper {
+    background-color: var(--wp--preset--color--background, #fff);
+}
+
+.edit-post-visual-editor__post-title-wrapper{
+    background-color: #fff;
+    margin-top: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px;
+    border-bottom: 2px solid var(--wp--preset--color--text, #000);
+}
+.edit-post-visual-editor__post-title-wrapper *{
+    max-width: 1136px;
+}

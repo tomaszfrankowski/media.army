@@ -1,0 +1,128 @@
+{
+  "__generated__": "⚠️ This file is generated. Do not edit.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [],
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "var(--color-primary, #3551f2)"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "var(--color-secondary, #8e2de2)"
+        },
+        {
+          "name": "Background",
+          "slug": "background",
+          "color": "var(--color-background, #fff)"
+        },
+        {
+          "name": "Text",
+          "slug": "text",
+          "color": "var(--color-text, #0e1530)"
+        },
+        {
+          "name": "Headings",
+          "slug": "headings",
+          "color": "var(--color-secondary, #0e1530)"
+        }
+      ]
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "padding": false,
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "fontFamilies": [
+        {
+          "name": "Ui-sans-serif",
+          "slug": "sans",
+          "fontFamily": "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\""
+        },
+        {
+          "name": "Ui-serif",
+          "slug": "serif",
+          "fontFamily": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif"
+        },
+        {
+          "name": "Ui-monospace",
+          "slug": "mono",
+          "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "sm",
+          "slug": "sm",
+          "size": "14px"
+        },
+        {
+          "name": "base",
+          "slug": "base",
+          "size": "16px"
+        },
+        {
+          "name": "default",
+          "slug": "default",
+          "size": "16px"
+        },
+        {
+          "name": "xl",
+          "slug": "xl",
+          "size": "27px"
+        },
+        {
+          "name": "2xl",
+          "slug": "2xl",
+          "size": "34px"
+        },
+        {
+          "name": "3xl",
+          "slug": "3xl",
+          "size": "43px"
+        },
+        {
+          "name": "4xl",
+          "slug": "4xl",
+          "size": "55px"
+        },
+        {
+          "name": "5xl",
+          "slug": "5xl",
+          "size": "128px"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sans)"
+    }
+  }
+}

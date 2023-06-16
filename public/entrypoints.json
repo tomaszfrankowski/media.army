@@ -1,0 +1,25 @@
+{
+  "app": {
+    "js": [
+      "js/runtime.js",
+      "js/app.js"
+    ],
+    "dependencies": []
+  },
+  "editor": {
+    "js": [
+      "js/runtime.js",
+      "js/editor.js"
+    ],
+    "dependencies": [
+      "wp-blocks"
+    ]
+  },
+  "swiper": {
+    "js": [
+      "js/runtime.js",
+      "js/swiper.js"
+    ],
+    "dependencies": []
+  }
+}

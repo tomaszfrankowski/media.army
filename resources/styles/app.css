@@ -1,0 +1,53 @@
+@import 'swiper/swiper-bundle.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body{
+    background-color: var(--wp--preset--color--background, #fff);
+}
+
+.wp-block-columns{
+    margin-bottom: 0 !important;
+}
+
+.button:hover .under{
+    width: 100%;
+    --color-secondary: var(--color-primary);
+    background-blend-mode: normal;
+    opacity: 1;
+}
+
+.h6{
+    @apply block text-[17px] tracking-[1px] leading-[24px] mt-2 mb-4 font-semibold uppercase;
+}
+
+.h5{
+    @apply block text-[21px] leading-[32px] mt-4 mb-4 font-bold;
+}
+
+.h4{
+    @apply block text-[27px] leading-[40px] mt-6 mb-4 font-bold;
+}
+
+.h3{
+    @apply block text-[34px] leading-[48px] mt-8 mb-4 font-bold;
+}
+
+.h2{
+    @apply block text-[43px] leading-[56px] mt-10 mb-4 font-bold;
+}
+
+.h1{
+    @apply block text-[55px] leading-[64px] mt-12 mb-4 font-bold;
+}
+
+:root{
+    --color-background: #fff;
+    --color-primary: #3551F2;
+    --color-secondary: #B2D0E9;
+    --color-text: #0E1530;
+    --color-headings: #0E1530;
+}

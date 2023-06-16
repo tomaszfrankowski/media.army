@@ -1,0 +1,33 @@
+{
+  "chunks": {
+    "byName": {
+      "app": 143,
+      "editor": 189,
+      "runtime": 666,
+      "swiper": 390
+    },
+    "bySource": {
+      "0 app": 666,
+      "0 editor": 666,
+      "0 swiper": 666,
+      "1 app": 259,
+      "1 editor": 259,
+      "1 swiper": 390,
+      "2 app": 638,
+      "2 editor": 189,
+      "3 app": 143
+    },
+    "usedIds": [
+      143,
+      189,
+      259,
+      390,
+      638,
+      666
+    ]
+  },
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": []
+  }
+}
