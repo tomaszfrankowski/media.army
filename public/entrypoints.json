@@ -1,15 +1,32 @@
 {
   "app": {
     "js": [
-      "js/runtime.js",
-      "js/app.js"
+      "js/runtime.28e92d.js",
+      "js/259.6cf96b.js",
+      "js/638.c243bb.js",
+      "js/app.9c511f.js"
+    ],
+    "css": [
+      "css/app.b94aa4.css"
+    ],
+    "dependencies": []
+  },
+  "blocks": {
+    "js": [
+      "js/runtime.28e92d.js",
+      "js/259.6cf96b.js",
+      "js/blocks.49d021.js"
     ],
     "dependencies": []
   },
   "editor": {
     "js": [
-      "js/runtime.js",
-      "js/editor.js"
+      "js/runtime.28e92d.js",
+      "js/259.6cf96b.js",
+      "js/editor.359dbc.js"
+    ],
+    "css": [
+      "css/editor.1628cd.css"
     ],
     "dependencies": [
       "wp-blocks"
@@ -17,8 +34,11 @@
   },
   "swiper": {
     "js": [
-      "js/runtime.js",
-      "js/swiper.js"
+      "js/runtime.28e92d.js",
+      "js/swiper.b43a95.js"
+    ],
+    "css": [
+      "css/swiper.5779bb.css"
     ],
     "dependencies": []
   }

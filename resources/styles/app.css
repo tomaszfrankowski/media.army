@@ -13,7 +13,8 @@ body{
     margin-bottom: 0 !important;
 }
 
-.button:hover .under{
+
+.btn:hover .under{
     width: 100%;
     --color-secondary: var(--color-primary);
     background-blend-mode: normal;

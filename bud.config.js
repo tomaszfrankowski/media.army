@@ -1,7 +1,11 @@
 export default async (app) => {
+	const blockScripts = await app.glob('@scripts/blocks/*.js')
+	app.sh("echo pwd" + JSON.stringify(blockScripts));
+	console.log(blockScripts)
 	app
 		.entry({
 			app: ["@scripts/app", "@styles/app"],
+			blocks: blockScripts,
 			editor: ["@scripts/editor", "@styles/editor"],
 			swiper: ["@scripts/swiper-bundle", "@styles/swiper-bundle"],
 		})
@@ -9,7 +13,7 @@ export default async (app) => {
 		.watch(["resources/views", "app"])
 		.proxy("http://mediaarmy.local")
 		.serve("http://localhost:3000")
-		.setPublicPath("/app/themes/sage/public/")
+		.setPublicPath("/app/themes/media.army/public/")
 		.wpjson.setOption("styles", {
 			typography: {
 				fontFamily: "var(--wp--preset--font-family--sans)",

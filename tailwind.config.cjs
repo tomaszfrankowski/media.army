@@ -28,7 +28,7 @@ module.exports = {
 		screens: {
 			palm: "768px",
 			tablet: "1024px",
-			desktop: "1136px",
+			desktop: "1328px",
 		},
 		transitionDuration: {
 			1000: "1000ms",
@@ -36,21 +36,21 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: "var(--color-primary, #3551f2)",
-				secondary: "var(--color-secondary, #8e2de2)",
+				secondary: "var(--color-secondary, #B2D0E9)",
 				background: "var(--color-background, #fff)",
 				text: "var(--color-text, #0e1530)",
-				headings: "var(--color-secondary, #0e1530)",
+				headings: "var(--color-text, #0e1530)",
 			},
 			spacing: {
-				small: "40px",
-				medium: "80px",
-				large: "160px",
+				small: "32px",
+				medium: "64px",
+				large: "128px",
 			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
 						color: theme("colors.text"),
-						"--tw-prose-headings": theme("colors.headings"),
+						"--tw-prose-headings": theme("colors.text"),
 						maxWidth: "100%",
 						fontSize: "21px",
 						lineHeight: "32px",
@@ -119,8 +119,8 @@ module.exports = {
 			});
 
 			const widths = [
-				{ slug: "-narrow", width: "800px" },
-				{ slug: "", width: "1136px" },
+				{ slug: "-narrow", width: "1104px" },
+				{ slug: "", width: "1328px" },
 				{ slug: "-full", width: "100%" },
 			];
 			const heights = [
@@ -140,6 +140,7 @@ module.exports = {
 						const slug = ".container" + width.slug + height.slug + padding.slug;
 						addComponents({
 							[slug]: {
+								width: "100%",
 								maxWidth: width.width,
 								padding: padding.padding,
 								height: height.height,
@@ -148,7 +149,6 @@ module.exports = {
 							},
 							[slug + " .container"]: {
 								maxWidth: "100%",
-								padding: "0",
 								marginLeft: "0",
 								marginRight: "0",
 							},
@@ -166,6 +166,9 @@ module.exports = {
 		},
 		{
 			pattern: /(bg|text)-(background|primary|secondary|tertiary|text)/,
+		},
+		{
+			pattern: /px-(0|8|16)/,
 		},
 	],
 };

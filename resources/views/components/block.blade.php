@@ -2,7 +2,7 @@
   @style(['background-image: url('.$containerBackgroundImage.')' => $containerBackgroundImage])
   >
   @if(!$attributes['noContainer'])
-    <div class=" container<?= get_field('container_width') ?><?= get_field('container_height') ?><?= get_field('container_padding') ?>">
+    <div class="{{ get_field('container_horizontal_padding') }} container<?= get_field('container_width') ?><?= get_field('container_height') ?><?= get_field('container_padding') ?>">
   @endif
 
   {!! $message ?? $slot !!}

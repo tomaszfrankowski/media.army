@@ -1,0 +1,19 @@
+{
+  "hash": "e2a1151f602c8ceefac8",
+  "errors": [
+    "ERROR in ./styles/app.css (../node_modules/@roots/bud-support/lib/css-loader/index.cjs??css!../node_modules/postcss-loader/dist/cjs.js??postcss!./styles/app.css)",
+    "Module build failed (from ../node_modules/postcss-loader/dist/cjs.js):",
+    "SyntaxError",
+    "",
+    "(55:1) postcss-nested: /Users/tomaszfrankowski/Local Sites/mediaarmy/app/public/wp-content/themes/media.army/resources/styles/app.css Unexpected '/'. Escaping special characters with \\ may help.",
+    "",
+    "  53 | }",
+    "  54 | ",
+    "> 55 | // create bouncing animation for .bouncing class",
+    "     | ^",
+    "  56 | @keyframes bouncing {",
+    "  57 |     0% {",
+    "",
+    "sage compiled with 1 error"
+  ]
+}

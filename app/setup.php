@@ -17,6 +17,10 @@ add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 }, 100);
 
+add_action('wp_enqueue_scripts', function () {
+    bundle('blocks')->enqueue();
+}, 100);
+
 /**
  * Register the theme assets with the block editor.
  *
@@ -83,7 +87,23 @@ add_action('after_setup_theme', function () {
 
     add_image_size( 'hero', 1920, 1080, true );
 
-
+    if( function_exists('acf_add_options_page') ) {
+        
+        acf_add_options_page(array(
+            'page_title'    => 'Theme General Settings',
+            'menu_title'    => 'Theme Settings',
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+        
+        acf_add_options_sub_page(array(
+            'page_title'    => 'Contact Info',
+            'menu_title'    => 'Contact',
+            'parent_slug'   => 'theme-general-settings',
+        ));
+        
+    }
     /**
      * Enable responsive embed support.
      *
