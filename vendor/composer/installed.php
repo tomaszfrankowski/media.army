@@ -3,7 +3,7 @@
         'name' => 'roots/sage',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e02579d1dfeceb373f8382a6e16d5aa9206ad1c0',
+        'reference' => 'd6e2447da940600a65cef13ceef61f177bd1e36d',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -235,6 +235,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'log1x/sage-svg' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => 'a97cc38f455542c7fd5ac3fe8718f407ddd28731',
+            'type' => 'package',
+            'install_path' => __DIR__ . '/../log1x/sage-svg',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'monolog/monolog' => array(
             'pretty_version' => '2.9.1',
             'version' => '2.9.1.0',
@@ -368,7 +377,7 @@
         'roots/sage' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e02579d1dfeceb373f8382a6e16d5aa9206ad1c0',
+            'reference' => 'd6e2447da940600a65cef13ceef61f177bd1e36d',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

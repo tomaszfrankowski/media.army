@@ -1,7 +1,5 @@
 export default async (app) => {
 	const blockScripts = await app.glob('@scripts/blocks/*.js')
-	app.sh("echo pwd" + JSON.stringify(blockScripts));
-	console.log(blockScripts)
 	app
 		.entry({
 			app: ["@scripts/app", "@styles/app"],

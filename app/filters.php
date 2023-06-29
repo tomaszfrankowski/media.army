@@ -22,3 +22,11 @@ add_filter( 'block_categories_all' , function( $categories ) {
 	);
 	return $categories;
 } );
+
+
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
+    if(isset($args->item_class)) {
+        $atts['class'] = $args->item_class;
+    }
+    return $atts;
+}, 1, 3);

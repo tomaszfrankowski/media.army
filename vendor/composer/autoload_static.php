@@ -24,6 +24,7 @@ class ComposerStaticInit6cd5d5f4f7af37ed517d08f05ede2979
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '7018e3dbeb54682c59da60bb2ff4f971' => __DIR__ . '/..' . '/roots/support/helpers.php',
+        '2fb983e63247f84d8365e00e3015e40b' => __DIR__ . '/..' . '/log1x/sage-svg/src/helpers.php',
         '1d3e394e13b0f60fc9509fa2e09fa96e' => __DIR__ . '/..' . '/roots/acorn/src/Roots/helpers.php',
         '343d14c26e6742d3d4650d589923312e' => __DIR__ . '/..' . '/roots/acorn/src/Roots/globals.php',
     );
@@ -82,6 +83,7 @@ class ComposerStaticInit6cd5d5f4f7af37ed517d08f05ede2979
         ),
         'L' => 
         array (
+            'Log1x\\SageSvg\\' => 14,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
         ),
@@ -265,6 +267,10 @@ class ComposerStaticInit6cd5d5f4f7af37ed517d08f05ede2979
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Log1x\\SageSvg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/log1x/sage-svg/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -279,9 +285,9 @@ class ComposerStaticInit6cd5d5f4f7af37ed517d08f05ede2979
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Session\\' => 
@@ -1305,6 +1311,8 @@ class ComposerStaticInit6cd5d5f4f7af37ed517d08f05ede2979
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'Log1x\\SageSvg\\SageSvg' => __DIR__ . '/..' . '/log1x/sage-svg/src/SageSvg.php',
+        'Log1x\\SageSvg\\SageSvgServiceProvider' => __DIR__ . '/..' . '/log1x/sage-svg/src/SageSvgServiceProvider.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',

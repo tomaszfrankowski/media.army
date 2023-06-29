@@ -3,7 +3,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'aos/dist/aos.css'; 
 
+body[data-aos-easing=smooth] [data-aos], [data-aos][data-aos][data-aos-easing=smooth] {
+  transition-timing-function: cubic-bezier(0.1, 1, 0.16, 1);
+}
 
 body{
     background-color: var(--wp--preset--color--background, #fff);
@@ -22,7 +26,7 @@ body{
 }
 
 .h6{
-    @apply block text-[17px] tracking-[1px] leading-[24px] mt-2 mb-4 font-semibold uppercase;
+    @apply block text-[17px] tracking-[3px] leading-[24px] mt-2 mb-4 font-semibold uppercase;
 }
 
 .h5{
@@ -51,4 +55,18 @@ body{
     --color-secondary: #B2D0E9;
     --color-text: #0E1530;
     --color-headings: #0E1530;
+}
+
+#menu-language-container .wpml-ls-item{
+    order: 2;
+    opacity: 0;
+}
+
+#menu-language-container .wpml-ls-current-language{
+    order: 1;
+    opacity: 1;
+}
+
+#menu-language-container:hover .wpml-ls-item{
+    opacity: 1;
 }
