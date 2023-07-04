@@ -2,5 +2,5 @@ node_modules
 .budfiles
 .vscode
 percy-tests
-.budfiles/
+.budfiles
 public
