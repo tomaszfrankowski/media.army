@@ -13,7 +13,7 @@
   SupportsMultiple: true
 --}}
 
-<x-block class="relative z-40">
+<x-block class="relative z-40 overflow-hidden">
   <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[656px] h-[328px]  overflow-hidden mix-blend-hard-light">
     <div class="w-[656px] h-[656px] bg-primary opacity-75 rounded-full"></div> 
     <div class="absolute bottom-0 left-1/2">

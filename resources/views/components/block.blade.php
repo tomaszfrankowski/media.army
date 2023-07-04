@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'bg-cover bg-'.$containerBackgroundColor]) }}
+<section {{ $attributes->merge(['class' => 'bg-cover bg-center bg-'.$containerBackgroundColor]) }}
   @style(['background-image: url('.$containerBackgroundImage.')' => $containerBackgroundImage])
   >
   @if(!$attributes['noContainer'])

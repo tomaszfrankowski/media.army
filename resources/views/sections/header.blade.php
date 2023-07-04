@@ -8,7 +8,7 @@
       <nav id="header-menu" class="nav-primary group relative" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}" style="--menu-item-position: 43px;">
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
-          'menu_class' => 'uppercase nav flex tracking-[2px]',
+          'menu_class' => 'uppercase nav flex tracking-[2px] tablet:flex-col tablet:bg-primary',
           'item_class' => 'px-4 py-8 inline-block',
           'echo' => false
           ]) !!}

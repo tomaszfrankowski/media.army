@@ -13,16 +13,16 @@
   SupportsMultiple: true
 --}}
 
-<div class="h-full relative pointer-events-none transform scale-125">
+<div class="h-full relative pointer-events-none transform scale-125 hidden">
   <h1 class="text-5xl text-center text-white font-bold h-full flex flex-col justify-center">
-    <span data-aos="fade-down">SALES</span>
+    <span>SALES</span>
     <span class="flex justify-center items-end gap-4">
-      <div aria-flowto="topnews-1" data-aos="fade-right" >MADE </div>
-      <div data-aos="fade-left" data-aos-delay="200" class="text-left w-[280px] leading-[26.9px] font-normal text-default">
+      <div aria-flowto="topnews-1">MADE </div>
+      <div class="text-left w-[280px] leading-[26.9px] font-normal text-default">
         <InnerBlocks />
       </div>
     </span>
-    <span id="topnews-1" data-aos="fade-up" >SIMPLE</span>
+    <span id="topnews-1">SIMPLE</span>
   </h1>
   <aside class="absolute right-0 top-0 w-8 h-full text-white">
     <div class="absolute transform -translate-x-1/2 -translate-y-1/2 -rotate-90 top-1/2 left-5 h-min w-min whitespace-nowrap flex gap-32">

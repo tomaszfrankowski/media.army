@@ -70,3 +70,53 @@ body{
 #menu-language-container:hover .wpml-ls-item{
     opacity: 1;
 }
+
+.has-base-font-size{
+    line-height: 24px;
+}
+
+.smooth{
+    @apply transition-all duration-1000 ease-smooth;
+}
+
+
+.has-sm-font-size{
+    line-height: 24px;
+}
+.has-md-font-size{
+    line-height: 32px;
+}
+.has-base-font-size{
+    line-height: 24px;
+}
+.has-md-font-size{
+    line-height: 32px;
+}
+.has-xl-font-size{
+    line-height: 40px;
+}
+
+.has-2xl-font-size{
+    line-height: 48px;
+}
+
+.has-3xl-font-size{
+    line-height: 56px;
+}
+
+.has-4xl-font-size{
+    line-height: 64px;
+}
+
+.has-5xl-font-size{
+    line-height: 112px;
+}
+
+figure img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-block-image{
+    margin-bottom: 0;
+}
