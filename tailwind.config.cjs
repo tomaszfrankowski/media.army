@@ -184,6 +184,9 @@ module.exports = {
 		{
 			pattern: /(pt|pb)-(10|20|40)/,
 		},
+		{
+			pattern: /(!?)(m)(t|r|b|l|x|y)-0/,
+		},
 	],
 };
 

@@ -62,6 +62,9 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_left' => __('Footer Left', 'sage'),
+        'footer_right' => __('Footer Right', 'sage'),
+        'footer_copyright' => __('Footer Copyright', 'sage'),
     ]);
 
     /**
