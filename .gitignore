@@ -1,8 +1,6 @@
+.budfiles/**
 node_modules
-.budfiles
 .vscode/**
 percy-tests
-.budfiles/
 public
 .DS_Store
-.budfiles/**
