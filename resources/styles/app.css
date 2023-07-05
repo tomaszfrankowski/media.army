@@ -158,3 +158,15 @@ figure + p{
     margin-left: auto;
     margin-right: auto;
 }
+
+.container-10{
+    @apply pt-5 md:pt-10
+}
+
+.container-20{
+    @apply pt-10 md:pt-20
+}
+
+.container-40{
+    @apply pt-20 md:pt-40
+}

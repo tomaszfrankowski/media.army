@@ -7,7 +7,7 @@
   
   >
   @if(!$attributes['noContainer'])
-    <div class="container px-8 <?= get_field('container_width') ?> <?= get_field('container_height') ?> <?= get_field('container_padding')['top'] ?> <?= get_field('container_padding')['bottom'] ?>">
+    <div class="container tablet:px-8 px-4 <?= get_field('container_width') ?> <?= get_field('container_height') ?> <?= get_field('container_padding')['top'] ?> <?= get_field('container_padding')['bottom'] ?>">
   @endif
 
   {!! $message ?? $slot !!}

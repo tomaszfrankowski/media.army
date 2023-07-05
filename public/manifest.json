@@ -16,6 +16,7 @@
   "editor.js.map": "js/editor.js.map",
   "swiper.js.map": "js/swiper.js.map",
   "runtime.js.map": "js/runtime.js.map",
+  "runtime.hot-update.js.map": "runtime.1550382907ca2767dcaf.hot-update.js.map",
   "node_modules_roots_bud-client_lib_hot_client_js.chunk.js.map": "js/dynamic/node_modules_roots_bud-client_lib_hot_client_js.chunk.js.map",
   "node_modules_roots_bud-client_lib_hot_components_indicator_index_js.chunk.js.map": "js/dynamic/node_modules_roots_bud-client_lib_hot_components_indicator_index_js.chunk.js.map",
   "node_modules_roots_bud-client_lib_hot_components_overlay_index_js.chunk.js.map": "js/dynamic/node_modules_roots_bud-client_lib_hot_components_overlay_index_js.chunk.js.map"
