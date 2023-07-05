@@ -53,7 +53,7 @@ body{
     --color-background: #fff;
     --color-primary: #3551F2;
     --color-secondary: #B2D0E9;
-    --color-text: #0E1530;
+    --color-content: #0E1530;
     --color-headings: #0E1530;
 }
 
@@ -119,4 +119,42 @@ figure img{
 
 .wp-block-image{
     margin-bottom: 0;
+}
+
+a{
+    cursor: pointer;
+}
+
+figure + p{
+    margin-top: 16px !important;
+}
+
+.container-line:before, .container-line:after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 1px;
+    height: 256px;
+    background-image: linear-gradient(to top, transparent, var(--container-line-before, transparent));
+    left: 50%;
+    top: 0;
+}
+
+.container-line:after{
+    top: auto;
+    bottom: 0;
+    background-image: linear-gradient(to top, var(--container-line-after, transparent), transparent);
+}
+
+.wp-block-media-text__media{
+ width: calc(100% - 16px);
+}
+.wp-block-media-text__content{
+    padding-left: 16px !important;
+    padding-right: 0 !important;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
 }

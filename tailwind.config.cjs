@@ -4,11 +4,9 @@ module.exports = {
 	content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}"],
 	corePlugins: {
 		backgroundOpacity: false,
+		container: false,
 	},
 	theme: {
-		container: {
-			center: true,
-		},
 		fontSize: {
 			sm: ["14px", { lineHeight: "24px" }], // 17px
 			base: ["16px", { lineHeight: "24px" }], // 21px : 32px
@@ -26,9 +24,15 @@ module.exports = {
 			relaxed: "1,.047619", // 40
 		},
 		screens: {
+			// breakpoints
 			palm: "768px",
 			tablet: "1024px",
 			desktop: "1328px",
+
+			// containers
+			narrow: "800px",
+			default: "1328px",
+			fullwidth: "100vw",
 		},
 		transitionDuration: {
 			1000: "1000ms",
@@ -38,13 +42,19 @@ module.exports = {
 				primary: "var(--color-primary, #3551f2)",
 				secondary: "var(--color-secondary, #B2D0E9)",
 				background: "var(--color-background, #fff)",
-				text: "var(--color-text, #0e1530)",
-				headings: "var(--color-text, #0e1530)",
+				content: "var(--color-content, #0e1530)",
+				headings: "var(--color-content, #0e1530)",
 			},
 			spacing: {
+				// vertical
 				small: "32px",
 				medium: "64px",
 				large: "128px",
+				// horizontal
+				half: "calc(50% - 16px)",
+				narrow: "800px",
+				fullwidth: "100vw",
+				defaultwidth: "1328px",
 			},
 			typography: (theme) => ({
 				DEFAULT: {
@@ -118,57 +128,61 @@ module.exports = {
 				},
 			});
 
-			const widths = [
-				{ slug: "-narrow", width: "1104px" },
-				{ slug: "", width: "1328px" },
-				{ slug: "-full", width: "100%" },
-			];
-			const heights = [
-				{ slug: "-fullheight", height: "100%" },
-				{ slug: "", height: "auto" },
-				{ slug: "-screen", height: "100vh" },
-			];
-			const paddings = [
-				{ slug: "-flat", padding: "0 32px" },
-				{ slug: "-low", padding: "40px 32px" },
-				{ slug: "", padding: "80px 32px" },
-				{ slug: "-tall", padding: "160px 32px" },
-			];
-			heights.forEach((height) => {
-				widths.forEach((width) => {
-					paddings.forEach((padding) => {
-						const slug = ".container" + width.slug + height.slug + padding.slug;
-						addComponents({
-							[slug]: {
-								width: "100%",
-								maxWidth: width.width,
-								padding: padding.padding,
-								height: height.height,
-								marginLeft: "auto",
-								marginRight: "auto",
-							},
-							[slug + " .container"]: {
-								maxWidth: "100%",
-								marginLeft: "0",
-								marginRight: "0",
-							},
-						});
-					});
-				});
-			});
+			// const widths = [
+			// 	{ slug: "-narrow", width: "1104px" },
+			// 	{ slug: "", width: "1328px" },
+			// 	{ slug: "-full", width: "100%" },
+			// ];
+			// const heights = [
+			// 	{ slug: "-fullheight", height: "100%" },
+			// 	{ slug: "", height: "auto" },
+			// 	{ slug: "-screen", height: "100vh" },
+			// ];
+			// const paddings = [
+			// 	{ slug: "-flat", padding: "0 32px" },
+			// 	{ slug: "-low", padding: "40px 32px" },
+			// 	{ slug: "", padding: "80px 32px" },
+			// 	{ slug: "-tall", padding: "160px 32px" },
+			// ];
+			// heights.forEach((height) => {
+			// 	widths.forEach((width) => {
+			// 		paddings.forEach((padding) => {
+			// 			const slug = ".container" + width.slug + height.slug + padding.slug;
+			// 			addComponents({
+			// 				[slug]: {
+			// 					width: "100%",
+			// 					maxWidth: width.width,
+			// 					padding: padding.padding,
+			// 					height: height.height,
+			// 					marginLeft: "auto",
+			// 					marginRight: "auto",
+			// 				},
+			// 				[slug + " .container"]: {
+			// 					maxWidth: "100%",
+			// 					marginLeft: "0",
+			// 					marginRight: "0",
+			// 				},
+			// 			});
+			// 		});
+			// 	});
+			// });
 		},
 	],
 	safelist: [
 		"prose",
+		"object-cover",
+		"text-right",
 		{
-			pattern:
-				/(container)(|-narrow|-full)(|-fullheight||-screen)(|-flat|-low|-tall)./,
+			pattern: /(bg|text)-(background|primary|secondary|tertiary|body)/,
 		},
 		{
-			pattern: /(bg|text)-(background|primary|secondary|tertiary|text)/,
+			pattern: /(h)-(auto|full|screen)/,
 		},
 		{
-			pattern: /px-(0|8|16)/,
+			pattern: /(max-w-screen)-(default|narrow|fullwidth)/,
+		},
+		{
+			pattern: /(pt|pb)-(10|20|40)/,
 		},
 	],
 };

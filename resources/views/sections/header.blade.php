@@ -1,6 +1,6 @@
 <header class="fixed w-full text-white z-50 bg-gradient-to-b from-[#0E153032]">
   <div class="container-flat flex justify-between items-center ">
-    <a class="brand w-56 flex items-center gap-8" href="{{ home_url('/') }}">
+    <a class="brand w-56 h-20 tablet:h-auto flex items-center gap-8" href="{{ home_url('/') }}">
       <img src="@asset('images/logo_media_army.svg')"/>
     </a>
   
@@ -8,25 +8,25 @@
       <nav id="header-menu" class="nav-primary group relative" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}" style="--menu-item-position: 43px;">
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
-          'menu_class' => 'uppercase nav flex tracking-[2px] tablet:flex-col tablet:bg-primary',
+          'menu_class' => 'uppercase nav flex-row hidden tracking-[2px] tablet:flex',
           'item_class' => 'px-4 py-8 inline-block',
           'echo' => false
           ]) !!}
-        <div class="absolute bottom-5 w-full">
+        <div class="hidden tablet:block absolute bottom-5 w-full">
           <div id="menu-walker" class="absolute -left-1 w-2 h-2 pointer-events-none group-hover:bg-white transform translate-x-[var(--menu-item-position)] rounded-full bg-primary transition-all duration-1000 ease-smooth"></div>
         </div>
       </nav>
     @endif
 
-    <div  class="w-56 flex justify-end group ">
-      <div id="menu-language-container" class="group-hover:after:opacity-100 after:transition-all after:duration-1000 after:ease-smooth group-hover:text-text relative px-2 py-2 after:h-24 after:absolute after:-top-2 text-white after:opacity-0 after:-z-10 after:w-20 after:transform after:translate-x-3 after:px-4 after:py-4 after:rounded-lg after:bg-secondary inline-block flex justify-end items-center text-sm">
+    <div  class="w-56 tablet:flex justify-end group hidden ">
+      <div id="menu-language-container" class="group-hover:after:opacity-100 after:transition-all after:duration-1000 after:ease-smooth group-hover:text-content relative px-2 py-2 after:h-24 after:absolute after:-top-2 text-white after:opacity-0 after:-z-10 after:w-20 after:transform after:translate-x-3 after:px-4 after:py-4 after:rounded-lg after:bg-secondary inline-block flex justify-end items-center text-sm">
         <svg width="4" height="3" viewBox="0 0 4 3" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path   d="M2 3L0.267949 3.26266e-07L3.73205 2.34249e-08L2 3Z" fill="currentColor"/>
         </svg>
         <div class="relative w-5 ml-2 mr-1 z-10">
           {!! wp_nav_menu([
             'theme_location' => 'language',
-            'menu_class' => 'uppercase flex flex-col absolute top-0 transform -translate-x-4 -translate-y-3 group-hover:text-text', 
+            'menu_class' => 'uppercase flex flex-col absolute top-0 transform -translate-x-4 -translate-y-3 group-hover:text-content', 
             'item_class' => 'px-4 hover:text-primary transition-all duration-1000 ease-smooth',
             'echo' => false
           ]) !!}
@@ -37,6 +37,10 @@
       </svg>
 
       </div>
+    </div>
+
+    <div class="flex tablet:hidden p-5 transform translate-x-5">
+      =
     </div>
   </div>
 </header>

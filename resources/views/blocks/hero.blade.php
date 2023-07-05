@@ -23,4 +23,4 @@
   </div>
   <InnerBlocks />
 </x-block>
-<div class="fixed top-0 left-0 w-full h-24 bg-text z-0"></div>
+<div class="fixed top-0 left-0 w-full h-20 tablet:h-24 bg-content z-30"></div>

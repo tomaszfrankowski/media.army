@@ -13,7 +13,7 @@
   SupportsMultiple: true
 --}}
 
-<div class="h-full relative pointer-events-none transform scale-125 hidden">
+<div class="h-full relative pointer-events-none transform scale-125 hidden tablet:block">
   <h1 class="text-5xl text-center text-white font-bold h-full flex flex-col justify-center">
     <span>SALES</span>
     <span class="flex justify-center items-end gap-4">

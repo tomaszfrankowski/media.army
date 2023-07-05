@@ -53,7 +53,7 @@ add_action('after_setup_theme', function () {
      *
      * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
      */
-    remove_theme_support('block-templates');
+    // remove_theme_support('block-templates');
 
     /**
      * Register the navigation menus.
@@ -86,6 +86,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
 
     add_image_size( 'hero', 1920, 1080, true );
+    add_image_size( 'services', 655, 525, true );
 
     if( function_exists('acf_add_options_page') ) {
         

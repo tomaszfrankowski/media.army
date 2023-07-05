@@ -28,14 +28,14 @@
           "color": "var(--color-background, #fff)"
         },
         {
-          "name": "Text",
-          "slug": "text",
-          "color": "var(--color-text, #0e1530)"
+          "name": "Content",
+          "slug": "content",
+          "color": "var(--color-content, #0e1530)"
         },
         {
           "name": "Headings",
           "slug": "headings",
-          "color": "var(--color-text, #0e1530)"
+          "color": "var(--color-content, #0e1530)"
         }
       ]
     },
