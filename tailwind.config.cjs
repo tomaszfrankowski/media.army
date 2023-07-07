@@ -56,6 +56,9 @@ module.exports = {
 				fullwidth: "100vw",
 				defaultwidth: "1328px",
 			},
+			maxWidth: {
+				paragraph: '400px',
+			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
@@ -127,51 +130,13 @@ module.exports = {
 						"var(--wp--preset--color--primary) !important",
 				},
 			});
-
-			// const widths = [
-			// 	{ slug: "-narrow", width: "1104px" },
-			// 	{ slug: "", width: "1328px" },
-			// 	{ slug: "-full", width: "100%" },
-			// ];
-			// const heights = [
-			// 	{ slug: "-fullheight", height: "100%" },
-			// 	{ slug: "", height: "auto" },
-			// 	{ slug: "-screen", height: "100vh" },
-			// ];
-			// const paddings = [
-			// 	{ slug: "-flat", padding: "0 32px" },
-			// 	{ slug: "-low", padding: "40px 32px" },
-			// 	{ slug: "", padding: "80px 32px" },
-			// 	{ slug: "-tall", padding: "160px 32px" },
-			// ];
-			// heights.forEach((height) => {
-			// 	widths.forEach((width) => {
-			// 		paddings.forEach((padding) => {
-			// 			const slug = ".container" + width.slug + height.slug + padding.slug;
-			// 			addComponents({
-			// 				[slug]: {
-			// 					width: "100%",
-			// 					maxWidth: width.width,
-			// 					padding: padding.padding,
-			// 					height: height.height,
-			// 					marginLeft: "auto",
-			// 					marginRight: "auto",
-			// 				},
-			// 				[slug + " .container"]: {
-			// 					maxWidth: "100%",
-			// 					marginLeft: "0",
-			// 					marginRight: "0",
-			// 				},
-			// 			});
-			// 		});
-			// 	});
-			// });
 		},
 	],
 	safelist: [
 		"prose",
 		"object-cover",
 		"text-right",
+		"max-w-paragraph",
 		{
 			pattern: /(bg|text)-(background|primary|secondary|tertiary|body)/,
 		},
@@ -182,10 +147,10 @@ module.exports = {
 			pattern: /(max-w-screen)-(default|narrow|fullwidth)/,
 		},
 		{
-			pattern: /(pt|pb)-(10|20|40)/,
+			pattern: /(pt|pb)-(0|10|20|40)/,
 		},
 		{
-			pattern: /(!?)(m)(t|r|b|l|x|y)-0/,
+			pattern: /(!?)(m|p)(t|r|b|l|x|y)-(0|4|8|16)/,
 		},
 	],
 };

@@ -49,9 +49,30 @@ $allowed_inner_blocks = ['acf/slide'];
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.slider', {
       direction: 'horizontal',
-      loop: true,
-      
-      // observer: true,
+      loop: <?= get_field('swiper_loop') ?>,
+      spaceBetween: <?= get_field('swiper_spaceBetween') ? get_field('swiper_spaceBetween') : '0' ?>,
+      slidesPerView: <?= get_field('swiper_slidesPerView') ? get_field('swiper_slidesPerView') : '1' ?>,
+      slidesOffsetBefore: function () {
+        const windowWidth = document.body.getBoundingClientRect().width
+        let offset = <?= get_field('swiper_slidesOffsetBefore') ? get_field('swiper_slidesOffsetBefore') : 0 ?>;
+        if(offset == 'containerDefault'){
+          offset = (windowWidth - 1328 + 64 ) / 2
+        }else if(offset == 'containerNarrow'){
+          offset = (windowWidth - 800 + 64 ) / 2
+        }
+        return (offset > 32 ? offset : 32);
+      },
+      slidesOffsetAfter: function () {
+        const windowWidth = document.body.getBoundingClientRect().width
+        if(windowWidth < 800) return 16
+        let offset = <?= get_field('swiper_slidesOffsetAfter') ? get_field('swiper_slidesOffsetAfter') : 0 ?>;
+        if(offset == 'containerDefault'){
+          offset = (windowWidth - 1328 + 64 ) / 2
+        }else if(offset == 'containerNarrow'){
+          offset = (windowWidth - 800 + 64 ) / 2
+        }
+        return (offset > 32 ? offset : 32);
+      },
       pagination: <?= get_field('pagination') ? "{el: '.swiper-pagination', type: '". get_field("type") ."'}" : 'false' ?>,
       navigation: <?= get_field('navigation') ? "{nextEl: '.slider__navigation--next', prevEl: '.slider__navigation--prev'}" : 'false' ?>,
       scrollbar: <?= get_field('scrollbar') ?  "{el: '.swiper-scrollbar'}" : 'false' ?>,
