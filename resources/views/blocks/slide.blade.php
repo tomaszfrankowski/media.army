@@ -14,6 +14,6 @@
   parent: [ 'acf/slider' ],
 --}}
 
-<x-block noContainer class="swiper-slide">
+<x-block noContainer class="swiper-slide" style="width: {{ get_field('slide_width') }}">
     <InnerBlocks />
 </x-block>

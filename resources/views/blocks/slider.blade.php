@@ -19,9 +19,11 @@ $template = array(
     ) ),
 );
 $allowed_inner_blocks = ['acf/slide'];
+
+$slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqid();
 ?>
 
-<x-block noContainer class="slider swiper" id="{{ get_field('slider_id') }}">
+<x-block noContainer class="slider swiper" id="{{ $slider_id }}">
     <div class="swiper-wrapper">
       <InnerBlocks renderAppender="<div>Add Slide</div>" allowedBlocks="<?php echo esc_attr(wp_json_encode($allowed_inner_blocks)); ?>" template="<?= esc_attr( wp_json_encode( $template ) ) ?>" templateLock="false" orientation="vertical"/>
     </div>
@@ -47,8 +49,9 @@ $allowed_inner_blocks = ['acf/slide'];
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const slider_id = '#{{ $slider_id }}';
 
-    const swiper = new Swiper('.slider', {
+    const swiper = new Swiper(slider_id, {
       direction: 'horizontal',
       loop: <?= get_field('swiper_loop') ?>,
       spaceBetween: <?= get_field('swiper_spaceBetween') ? get_field('swiper_spaceBetween') : '0' ?>,
@@ -79,7 +82,7 @@ $allowed_inner_blocks = ['acf/slide'];
       scrollbar: <?= get_field('scrollbar') ?  "{el: '.swiper-scrollbar'}" : 'false' ?>,
     })
     window.swipers = [];
-    window.swipers['{{ get_field('slider_id') }}'] = swiper;
+    window.swipers['{{ $slider_id }}'] = swiper;
     console.log()
   }, false);
 </script>
