@@ -36,6 +36,11 @@
           "name": "Headings",
           "slug": "headings",
           "color": "var(--color-content, #0e1530)"
+        },
+        {
+          "name": "CurrentColor",
+          "slug": "currentcolor",
+          "color": "currentcolor"
         }
       ]
     },
@@ -91,6 +96,11 @@
           "name": "default",
           "slug": "default",
           "size": "16px"
+        },
+        {
+          "name": "l",
+          "slug": "l",
+          "size": "21px"
         },
         {
           "name": "xl",

@@ -1,29 +1,46 @@
 {
   "app": {
     "js": [
-      "js/runtime.js",
-      "js/app.js"
+      "js/runtime.0b941e.js",
+      "js/259.6cf96b.js",
+      "js/520.4a7fc3.js",
+      "js/543.05e552.js",
+      "js/631.5333d1.js",
+      "js/app.3998f7.js"
+    ],
+    "css": [
+      "css/app.c323cf.css"
     ],
     "dependencies": []
   },
   "blocks": {
     "js": [
-      "js/runtime.js",
-      "js/blocks.js"
+      "js/runtime.0b941e.js",
+      "js/259.6cf96b.js",
+      "js/631.5333d1.js",
+      "js/blocks.e599f2.js"
     ],
     "dependencies": []
   },
   "editor": {
     "js": [
-      "js/runtime.js",
-      "js/editor.js"
+      "js/runtime.0b941e.js",
+      "js/259.6cf96b.js",
+      "js/520.4a7fc3.js",
+      "js/editor.0c12f0.js"
+    ],
+    "css": [
+      "css/editor.8e92d8.css"
     ],
     "dependencies": []
   },
   "swiper": {
     "js": [
-      "js/runtime.js",
-      "js/swiper.js"
+      "js/runtime.0b941e.js",
+      "js/swiper.b43a95.js"
+    ],
+    "css": [
+      "css/swiper.5779bb.css"
     ],
     "dependencies": []
   }

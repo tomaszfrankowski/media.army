@@ -202,3 +202,15 @@ figure + p{
     display: none !important;
 }
 
+.accordion--single .accordion__content > *{
+    display: none;
+}
+
+.accordion--single.accordion--open .accordion__content > *{
+    display: block;
+}
+
+.accordion--single .accordion__content > *:first-child{
+    display: block;
+}
+

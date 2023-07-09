@@ -2,6 +2,7 @@ import domReady from '@roots/sage/client/dom-ready';
 import Swiper from 'swiper';
 import AOS from "aos";
 import { register } from "swiper/element/bundle";
+import Accordion from "@scripts/blocks/accordion";
 
 window.ototak = {
   offset: {

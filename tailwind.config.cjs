@@ -11,6 +11,7 @@ module.exports = {
 			sm: ["14px", { lineHeight: "24px" }], // 17px
 			base: ["16px", { lineHeight: "24px" }], // 21px : 32px
 			default: ["16px", { lineHeight: "24px" }], // 21px : 32px
+			l: ["21px", { lineHeight: "32px" }], // 21px : 32px
 			xl: ["27px", { lineHeight: "40px" }], // 27px : 40px
 			"2xl": ["34px", { lineHeight: "48px" }], // 34px
 			"3xl": ["43px", { lineHeight: "56px" }], // 43px
