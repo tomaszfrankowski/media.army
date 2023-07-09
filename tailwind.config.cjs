@@ -44,6 +44,7 @@ module.exports = {
 				background: "var(--color-background, #fff)",
 				content: "var(--color-content, #0e1530)",
 				headings: "var(--color-content, #0e1530)",
+				currentColor: "currentColor",
 			},
 			spacing: {
 				// vertical
@@ -57,13 +58,14 @@ module.exports = {
 				defaultwidth: "1328px",
 			},
 			maxWidth: {
-				paragraph: '400px',
+				paragraph: "400px",
 			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
 						color: theme("colors.text"),
 						"--tw-prose-headings": theme("colors.text"),
+						"--tw-prose-links": theme("colors.primary"),
 						maxWidth: "100%",
 						fontSize: "21px",
 						lineHeight: "32px",

@@ -18,9 +18,7 @@
       "js/runtime.js",
       "js/editor.js"
     ],
-    "dependencies": [
-      "wp-blocks"
-    ]
+    "dependencies": []
   },
   "swiper": {
     "js": [

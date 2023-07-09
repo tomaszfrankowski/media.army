@@ -14,6 +14,8 @@
   parent: [ 'acf/slider' ],
 --}}
 
-<x-block noContainer class="swiper-slide" style="width: {{ get_field('slide_width') }}">
+{{-- <x-block noContainer class="swiper-slide" style="width: {{ get_field('slide_width') }}"> --}}
+  <swiper-slide style="width: {{ get_field('slide_width') }}" data-title="<?= get_field('slide_title') ?>">
     <InnerBlocks />
-</x-block>
+  </swiper-slide>
+{{-- </x-block> --}}
