@@ -13,6 +13,6 @@
   SupportsMultiple: true
 --}}
 
-<x-block class="prose">
+<x-block class="prose {{ $block['classes'] }}">
     <InnerBlocks />
 </x-block>

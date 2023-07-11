@@ -36,9 +36,17 @@ module.exports = {
 			fullwidth: "100vw",
 		},
 		transitionDuration: {
+			100: "100ms",
 			1000: "1000ms",
 		},
 		extend: {
+			boxShadow: {
+				testimonial: "0 4px 8px -15px rgba(0, 0, 0, 0.3)",
+			},
+			borderRadius: {
+				testimonial: "0 2rem 2rem 2rem",
+				"32": "32px",
+			},
 			colors: {
 				primary: "var(--color-primary, #3551f2)",
 				secondary: "var(--color-secondary, #B2D0E9)",
@@ -54,6 +62,7 @@ module.exports = {
 				large: "128px",
 				// horizontal
 				half: "calc(50% - 16px)",
+				testimonials: "640px",
 				narrow: "800px",
 				fullwidth: "100vw",
 				defaultwidth: "1328px",
@@ -140,6 +149,7 @@ module.exports = {
 		"object-cover",
 		"text-right",
 		"max-w-paragraph",
+		"rounded-32",
 		{
 			pattern: /(bg|text)-(background|primary|secondary|tertiary|body)/,
 		},

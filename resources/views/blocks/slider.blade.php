@@ -52,6 +52,7 @@ $slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqi
 
     if(typeof slidesOffsetBefore == 'string'){
       swiperEl.setAttribute('slides-offset-before', window.ototak.offset[slidesOffsetBefore]);
+      swiperEl.swiper.update();
       window.addEventListener('resize', function(){
         swiperEl.setAttribute('slides-offset-before', window.ototak.offset[slidesOffsetBefore]);
       }, {passive: true})

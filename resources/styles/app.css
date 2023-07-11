@@ -175,7 +175,7 @@ figure + p{
 
 .container-line:before, .container-line:after{
     content: '';
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     width: 1px;
     height: 256px;
@@ -214,3 +214,75 @@ figure + p{
     display: block;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.nf-form-fields-required{
+    display: none;
+}
+
+.frm_form_field{
+    margin-bottom: 0 !important;
+}
+
+.frm_form_field input[type], .frm_form_field textarea[name]{
+    border-radius: 32px !important;
+    line-height: 32px !important;
+    font-size: 18px !important;
+    padding: 16px 64px 16px 32px !important;
+    font-weight: 500 !important;
+    display: block !important;
+    height: auto !important;
+    border: 1px solid var(--color-secondary) !important;
+    box-shadow: none !important;
+}
+
+.frm_fields_container{
+    gap: 32px !important;
+}
+
+.frm_form_field input[type]:focus{
+    border-color: var(--color-primary) !important;
+    box-shadow: none !important;
+}
+
+.frm_primary_label{
+    display: none !important;
+}
+
+.frm_button_submit{
+    position: absolute !important;
+    right: 8px !important;
+    bottom: 30px !important;
+    line-height: 32px !important;
+    padding: 8px 32px !important;
+    border-radius: 32px !important;
+    background: var(--color-primary) !important;
+    text-transform: uppercase !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transition: all 1s cubic-bezier(0.1, 1, 0.16, 1) !important;
+}
+.frm_button_submit:hover{
+    background: color-mix(in srgb, var(--color-primary) 80%, var(--color-secondary)) !important;
+    color: #fff !important;
+}
+
+.frm_fields_container{
+    position: relative;
+}
+
+.floating-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: -1;
+    display: inline-block;
+}
+
+.floating-image img{
+    margin-left: auto;
+    margin-right: 0;
+}

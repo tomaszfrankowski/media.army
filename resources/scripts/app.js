@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import AOS from "aos";
 import { register } from "swiper/element/bundle";
 import Accordion from "@scripts/blocks/accordion";
+import Testimonials  from "@scripts/blocks/testimonials";
 
 window.ototak = {
   offset: {
@@ -14,7 +15,7 @@ window.ototak = {
 function calcOffset() {
   const windowWidth = document.body.getBoundingClientRect().width;
   if(windowWidth >= 1024) {
-    window.ototak.offset.containerDefault = ((windowWidth - 1328 + 64) / 2) > 32 ? ((windowWidth - 1328 + 64) / 2) : 32;
+    window.ototak.offset.containerDefault = Math.round( ((windowWidth - 1328 + 64) / 2) > 32 ? ((windowWidth - 1328 + 64) / 2) : 32);
     window.ototak.offset.containerNarrow = ((windowWidth - 800 + 64) / 2) > 32 ? ((windowWidth - 800 + 64) / 2) : 32;
   }else{
     window.ototak.offset.containerDefault = 32;
