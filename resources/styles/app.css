@@ -72,6 +72,21 @@ body{
 .container-b-40{
     @apply pb-20;
 }
+
+.container-t-container{
+    @apply pt-16;
+}
+.container-b-container{
+    @apply pb-16;
+}
+
+.container-t-container-s{
+    @apply pt-8;
+}
+.container-b-container-s{
+    @apply pb-8;
+}
+
 @media screen and (min-width: 1024px) {
     .container-t-10{
         @apply pt-10 
@@ -90,6 +105,19 @@ body{
     }
     .container-b-40{
         @apply pb-40
+    }
+    .container-t-container{
+        @apply pt-32;
+    }
+    .container-b-container{
+        @apply pb-32;
+    }
+
+    .container-t-container-s{
+        @apply pt-16;
+    }
+    .container-b-container-s{
+        @apply pb-16;
     }
 }
 
@@ -163,6 +191,7 @@ figure img{
 
 .wp-block-image{
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 a{
@@ -191,10 +220,10 @@ figure + p{
 }
 
 .wp-block-media-text__media{
- width: calc(100% - 16px);
+ width: calc(100% - 8px);
 }
 .wp-block-media-text__content{
-    padding-left: 16px !important;
+    padding-left: 8px !important;
     padding-right: 0 !important;
 }
 
@@ -238,8 +267,14 @@ figure + p{
     box-shadow: none !important;
 }
 
+.contact .frm_form_field input[type], .contact .frm_form_field textarea[name]{
+    background: var(--color-content) !important;
+    color: var(--color-background) !important;
+}
+
 .frm_fields_container{
-    gap: 32px !important;
+    gap: 16px !important;
+    margin-bottom: -32px;
 }
 
 .frm_form_field input[type]:focus{
@@ -253,8 +288,8 @@ figure + p{
 
 .frm_button_submit{
     position: absolute !important;
-    right: 8px !important;
-    bottom: 30px !important;
+    right: 9px !important;
+    bottom: 16px !important;
     line-height: 32px !important;
     padding: 8px 32px !important;
     border-radius: 32px !important;
@@ -275,7 +310,8 @@ figure + p{
 
 .floating-image{
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
     width: 50%;
     z-index: -1;
@@ -285,4 +321,17 @@ figure + p{
 .floating-image img{
     margin-left: auto;
     margin-right: 0;
+}
+
+:where(.wp-block-columns.is-layout-flex){
+    gap: 16px;
+}
+
+.wp-block-button__link{
+    @apply h6;
+    font-size: 14px !important;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    margin: 0;
 }

@@ -23,7 +23,7 @@ $slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqi
 <x-block>
   @if(get_field('swiper_menu'))
       <div class="container text-center">
-        <ul class="<?= $slider_id ?>__navigation-menu mb-16 mx-auto my-0 relative list-none p-0 not-prose text-currentColor px-1 bg-secondary rounded-full inline-flex">
+        <ul class="<?= $slider_id ?>__navigation-menu mb-16 mx-auto my-0 relative list-none p-0 not-prose text-currentColor px-1 bg-secondary rounded-full inline-flex max-w-full overflow-x-scroll no-scrollbar">
           <div class="walker absolute bg-background rounded-full top-1 h-[calc(100%-8px)] transition-all duration-1000 ease-smooth z-0"></div>
         </ul>
       </div>
@@ -72,7 +72,7 @@ $slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqi
         const title = slide.dataset.title;
         const li = document.createElement('li');
         li.classList.add('text-currentColor', 'z-10');
-        li.innerHTML = `<a href="#" class="text-content px-16 py-4 inline-block h6 !leading-[32px] !m-0">${title}</a>`;
+        li.innerHTML = `<a href="#" class="whitespace-nowrap text-content px-16 py-4 inline-block h6 !leading-[32px] !m-0 ">${title}</a>`;
         
         li.addEventListener('click', function(e){
           e.preventDefault();
@@ -82,6 +82,11 @@ $slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqi
           swiperEl.swiper.slideTo(index);
         })
         navigationMenu.appendChild(li);
+        const separator = document.createElement('li');
+        separator.classList.add('text-currentColor', 'z-10', '!leading-[32px]', 'p-6', 'last:hidden');
+        separator.innerHTML = `<img src="@asset('images/chevron-primary.svg')" width="9" height="18" />`;
+        
+        navigationMenu.appendChild(separator);
 
         if(index == 0){
           walker.style.left = `${li.offsetLeft}px`;

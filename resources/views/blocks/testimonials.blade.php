@@ -19,8 +19,8 @@ $template = array(
 $allowed_inner_blocks = ['acf/testimonial-single'];
 ?>
 
-<div class="testimonials max-h-testimonials overflow-hidden">
-  <div class="testimonials__wrapper mb-16 columns-2 column-gap[32px] [break-inside:avoid] transform translate-y-[var(--translate-y)] transition-transform ease-linear duration-100">
+<div class="testimonials max-h-testimonials tablet:overflow-hidden overflow-x-scroll">
+  <div class="testimonials__wrapper mb-16 tablet:columns-2 column-gap[16px] gap-4 flex tablet:block flex-row [break-inside:avoid] transform translate-y-[var(--translate-y)] transition-transform ease-linear duration-100">
       <InnerBlocks renderAppender="<div>Add Testimonial</div>" allowedBlocks="<?php echo esc_attr(wp_json_encode($allowed_inner_blocks)); ?>" template="<?= esc_attr( wp_json_encode( $template ) ) ?>" templateLock="false" orientation="vertical"/>
   </div>
 </div>

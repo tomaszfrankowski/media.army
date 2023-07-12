@@ -23,6 +23,9 @@ domReady(async () => {
         let isRunning = true;
         let translate = -blocksHeight;
         setInterval(() => {
+            if(window.innerWidth < 1024){
+                return;
+            }
             if(translate < (-blocksHeight * 2) ){
                 testimonialsWrapper.classList.remove("transition-transform");
                 translate = -blocksHeight;

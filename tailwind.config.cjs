@@ -16,7 +16,7 @@ module.exports = {
 			"2xl": ["34px", { lineHeight: "48px" }], // 34px
 			"3xl": ["43px", { lineHeight: "56px" }], // 43px
 			"4xl": ["55px", { lineHeight: "64px" }], // 55px
-			"5xl": ["128px", { lineHeight: "112px" }], // 70px
+			"5xl": ["160px", { lineHeight: "128px" }], // 70px
 		},
 		lineHeight: {
 			none: "1",
@@ -163,7 +163,7 @@ module.exports = {
 			pattern: /(pt|pb)-(0|10|20|40)/,
 		},
 		{
-			pattern: /(!?)(m|p)(t|r|b|l|x|y)-(0|4|8|16)/,
+			pattern: /(!?)(m|p)(t|r|b|l|x|y)-(0|4|6|8|16)/,
 		},
 	],
 };

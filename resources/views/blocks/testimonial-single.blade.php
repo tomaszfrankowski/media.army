@@ -21,6 +21,6 @@ $template = array(
 );
 ?>
 
-<div class="testimonials__single bg-white mb-4 flex flex-col p-8 rounded-testimonial shadow-md block [break-inside:avoid] first-of-type:mt-40">
+<div class="testimonials__single w-full min-w-fit bg-white mb-4 flex flex-col p-8 rounded-testimonial shadow-md block [break-inside:avoid] tablet:first-of-type:mt-40">
     <InnerBlocks renderAppender="<div>Add Testimonial</div>" template="<?= esc_attr( wp_json_encode( $template ) ) ?>" templateLock="all" orientation="vertical"/>
 </div>

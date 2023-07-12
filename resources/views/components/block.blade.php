@@ -7,7 +7,7 @@
   >
   
   @if(!$attributes['noContainer'])
-    <div class="container <?= get_field('container_width') ?> <?= get_field('container_height') ?> <?= get_field('container_padding')['horizontal'] ?> <?= get_field('container_padding')['top'] ?> <?= get_field('container_padding')['bottom'] ?>">
+    <div class="container <?= $attributes['containerClass'] ? $attributes['containerClass'] : null  ?> <?= get_field('container_width') ?> <?= get_field('container_height') ?> <?= get_field('container_padding')['horizontal'] ?> <?= get_field('container_padding')['top'] ?> <?= get_field('container_padding')['bottom'] ?>">
   @endif
  
   {!! $message ?? $slot !!}

@@ -1,4 +1,4 @@
-<header class="fixed w-full text-white z-50 bg-gradient-to-b from-[#0E153032]">
+<header class="fixed w-full text-white z-50 bg-gradient-to-b from-[#0E153032] hidden tablet:block">
   <div class="container max-w-screen-default px-4 tablet:px-8 flex justify-between items-center ">
     <a class="brand w-56 h-20 tablet:h-auto flex items-center gap-8" href="{{ home_url('/') }}">
       <img src="@asset('images/logo_media_army.svg')"/>
@@ -39,8 +39,53 @@
       </div>
     </div>
 
+  </div>
+</header>
+
+
+
+<header id="mobile-menu" class="fixed text-white z-50 bg-gradient-to-b from-[#0E153032] tablet:hidden h-screen w-full">
+  <div class="container max-w-screen-default px-4 tablet:px-8 flex justify-between items-center">
+    <a class="brand w-56 h-20 tablet:h-auto flex items-center gap-8" href="{{ home_url('/') }}">
+      <img src="@asset('images/logo_media_army.svg')"/>
+    </a>
+  
+    @if (has_nav_menu('primary_navigation'))
+      <nav id="mobile-primary" class="nav-primary group absolute bg-content top-20 hidden" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+        {!! wp_nav_menu([
+          'theme_location' => 'primary_navigation',
+          'menu_class' => 'uppercase nav flex-row tracking-[2px]',
+          'item_class' => 'px-4 py-8 inline-block',
+          'echo' => false
+          ]) !!}
+      </nav>
+    @endif
+
+    <div id="mobile-language" class="absolute bg-content bottom-4 left-4 justify-end group hidden">
+      <div class="relative px-2 py-2 flex justify-end items-center text-sm">
+        <svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.33337 8C1.33337 11.682 4.31804 14.6667 8.00004 14.6667C11.682 14.6667 14.6667 11.682 14.6667 8C14.6667 4.318 11.682 1.33333 8.00004 1.33333C4.31804 1.33333 1.33337 4.318 1.33337 8Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.66675 1.36667C8.66675 1.36667 10.6668 4 10.6668 8C10.6668 12 8.66675 14.6333 8.66675 14.6333M7.33342 14.6333C7.33342 14.6333 5.33342 12 5.33342 8C5.33342 4 7.33342 1.36667 7.33342 1.36667M1.75342 10.3333H14.2468M1.75342 5.66667H14.2468" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+        <div  class="relative z-10">
+          {!! wp_nav_menu([
+            'theme_location' => 'language',
+            'menu_class' => 'uppercase flex', 
+            'item_class' => 'px-1',
+            'echo' => false
+          ]) !!}
+        </div>
+        
+
+      </div>
+    </div>
+
     <div class="flex tablet:hidden p-5 transform translate-x-5">
-      =
+      <button id="menu-button" class="h-4 w-6 relative focus:outline-none">
+        <div class="absolute w-full h-px bg-white rounded-full top-0 left-0 transform -translate-y-1/2 transition-all duration-1000 ease-smooth"></div>
+        <div class="absolute w-full h-px bg-white rounded-full top-1/2 left-0 transform -translate-y-1/2 transition-all duration-1000 ease-smooth"></div>
+        <div class="absolute w-full h-px bg-white rounded-full top-full left-0 transform -translate-y-1/2 transition-all duration-1000 ease-smooth"></div>
+      </button>
     </div>
   </div>
 </header>

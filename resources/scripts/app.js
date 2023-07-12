@@ -56,6 +56,17 @@ domReady(async () => {
             menu.style.setProperty('--menu-item-position', item.positionLeft + 'px');
         });
     });
+
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const menuButton = mobileMenu.querySelector("#menu-button");
+    const mobilePrimary = mobileMenu.querySelector("#mobile-primary");
+    const mobileLanguage = mobileMenu.querySelector("#mobile-language");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("bg-content");
+      mobilePrimary.classList.toggle("hidden");
+      mobileLanguage.classList.toggle("hidden");
+    });
 });
 
 import.meta.webpackHot?.accept(console.error);
