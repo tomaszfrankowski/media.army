@@ -38,24 +38,25 @@ domReady(async () => {
     const menu = document.querySelector('#header-menu');
     const menuItems = menu.querySelectorAll('li');
     const currentMenuItem = menu.querySelector('.current-menu-item');
-    
+    if(currentMenuItem){
+  menu.style.setProperty(
+    "--menu-item-position",
+    currentMenuItem.offsetWidth / 2 + "px"
+  );
+  menu.addEventListener("mouseleave", () => {
     menu.style.setProperty(
-			"--menu-item-position",
-			currentMenuItem.offsetWidth / 2 + "px"
-		);
-    menu.addEventListener("mouseleave", () => {
-			menu.style.setProperty(
-				"--menu-item-position",
-				currentMenuItem.offsetWidth / 2 + "px"
-			);
-		});
-    
-    menuItems.forEach((item) => {
-        item.positionLeft = item.offsetLeft + item.offsetWidth / 2;
-        item.addEventListener('mouseenter', () => {
-            menu.style.setProperty('--menu-item-position', item.positionLeft + 'px');
-        });
-    });
+      "--menu-item-position",
+      currentMenuItem.offsetWidth / 2 + "px"
+    );
+  });
+  
+  menuItems.forEach((item) => {
+      item.positionLeft = item.offsetLeft + item.offsetWidth / 2;
+      item.addEventListener('mouseenter', () => {
+          menu.style.setProperty('--menu-item-position', item.positionLeft + 'px');
+      });
+  });
+}
 
     const mobileMenu = document.querySelector("#mobile-menu");
     const menuButton = mobileMenu.querySelector("#menu-button");
@@ -66,6 +67,21 @@ domReady(async () => {
       mobileMenu.classList.toggle("bg-content");
       mobilePrimary.classList.toggle("hidden");
       mobileLanguage.classList.toggle("hidden");
+    });
+
+    const serviceBlocks = document.querySelectorAll(".service-block");
+    serviceBlocks.forEach((block) => {
+      console.log('bo', block)
+      block.addEventListener("mousemove", (e) => {
+        block.style.setProperty(
+					"--mouse-position-x",
+          e.clientX - block.offsetLeft + 32 + "px"
+				);
+        block.style.setProperty(
+          "--mouse-position-y",
+          e.clientY - block.offsetTop + "px"
+        );
+      });
     });
 });
 
