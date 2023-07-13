@@ -24,7 +24,7 @@ function calcOffset() {
 
 
 }
-window.addEventListener("resize", calcOffset(), { passive: true });
+window.addEventListener("resize", calcOffset, { passive: true });
 
 domReady(async () => {
   register(); // Swiper
@@ -64,6 +64,8 @@ domReady(async () => {
     const mobileLanguage = mobileMenu.querySelector("#mobile-language");
 
     menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("h-20");
+      mobileMenu.classList.toggle("h-screen");
       mobileMenu.classList.toggle("bg-content");
       mobilePrimary.classList.toggle("hidden");
       mobileLanguage.classList.toggle("hidden");
@@ -83,6 +85,26 @@ domReady(async () => {
         );
       });
     });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+			anchor.addEventListener("click", function (e) {
+				e.preventDefault();
+        console.log('anchor')
+				document.querySelector(this.getAttribute("href")).scrollIntoView({
+					behavior: "smooth",
+          block: "end"
+				});
+			});
+		});
+
+    document.querySelector('#go-up').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
 });
+
+
 
 import.meta.webpackHot?.accept(console.error);

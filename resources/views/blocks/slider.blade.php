@@ -55,12 +55,14 @@ $slider_id = get_field('slider_id') ? get_field('slider_id') : 'slider-' . uniqi
       swiperEl.swiper.update();
       window.addEventListener('resize', function(){
         swiperEl.setAttribute('slides-offset-before', window.ototak.offset[slidesOffsetBefore]);
+        swiperEl.swiper.update();
       }, {passive: true})
     }
     if(typeof slidesOffsetAfter == 'string'){
       swiperEl.setAttribute('slides-offset-after', window.ototak.offset[slidesOffsetAfter]);
       window.addEventListener('resize', function(){
         swiperEl.setAttribute('slides-offset-after', window.ototak.offset[slidesOffsetAfter]);
+        swiperEl.swiper.update();
       }, {passive: true})
     }
 

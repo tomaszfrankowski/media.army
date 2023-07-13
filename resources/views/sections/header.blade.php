@@ -44,7 +44,7 @@
 
 
 
-<header id="mobile-menu" class="fixed text-white z-50 bg-gradient-to-b from-[#0E153032] tablet:hidden h-screen w-full">
+<header id="mobile-menu" class="fixed text-white z-50 bg-gradient-to-b from-[#0E153032] tablet:hidden h-20 w-full">
   <div class="container max-w-screen-default px-4 tablet:px-8 flex justify-between items-center">
     <a class="brand w-56 h-20 tablet:h-auto flex items-center gap-8" href="{{ home_url('/') }}">
       <img src="@asset('images/logo_media_army.svg')"/>

@@ -150,8 +150,11 @@ module.exports = {
 		"text-right",
 		"max-w-paragraph",
 		"rounded-32",
+		"order-2",
+		"order-3",
 		{
 			pattern: /(bg|text)-(background|primary|secondary|tertiary|body)/,
+			variants: ["hover", "focus"],
 		},
 		{
 			pattern: /(h)-(auto|full|screen)/,

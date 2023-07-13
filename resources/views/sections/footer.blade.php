@@ -5,7 +5,7 @@
     <div class="w-[656px] h-[656px] absolute -top-full bg-primary rounded-full"></div> 
     <div class="absolute top-0 left-1/2">
       <div class="h-16 w-px bg-white"></div>
-      <div class="transform rotate-90 -translate-x-3 origin-bottom-left mb-16  text-white text-sm uppercase">{{ __('GO UP')}}</div>
+      <div class="transform rotate-90 -translate-x-3 origin-bottom-left mb-16  text-white text-sm uppercase"><a href="#" id="go-up">{{ __('GO UP')}}</a></div>
     </div>
   </div>
 
